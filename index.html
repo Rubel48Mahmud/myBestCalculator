@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Calculator Created By Rubel Mahmud</title>
+<style type="text/css">
+*{margin:0;
+padding:0;
+box-sizing:border-box}
+ 
+body{background:#EAEBEC;}
+ 
+.main{
+width:220px;
+height:330px;
+margin:0 auto;
+margin-top:30px;
+box-shadow:0px 8px 50px -7px black;
+
+}
+.clock-div{
+background:#3A4655;
+height:15px;
+font-weight:bold;
+font-size:12px
+}
+.clock-div small{
+margin-left:5px;
+color:#fff}
+ 
+ 
+ 
+.display-div{height:70px;
+background: #3A4655;
+}
+.display-div input[type="text"]{
+height:100%;
+width:100%;
+border:none;
+outline:none;
+background:none;
+text-align:right;
+padding:10px;
+font-size:30px;
+font-weight:bold;
+color:#fff;
+}
+ 
+.button-div{
+height:260px;
+background: #3A4655;
+}
+ 
+.button-div input[type="button"]{
+width:50px;
+height:50px;
+font-size:20px;
+font-weight:bold;
+margin-left:1.5px;
+margin-top:1.8px
+}
+.button-div input[type="button"]:active{
+background:rgba(0,0,0,0.5)}
+ 
+.button-operators{
+color: #AEB3BA;
+background: #404D5E;
+outline:none;
+border:none
+}
+.c{
+color: #D95D4E;
+}
+ 
+.number{
+background: #425062;
+color:#fff;
+border:none;
+outline:none
+}
+::-webkit-input-placeholder{font-size:15px;
+padding:12px;
+text-shadow:1px 1px 2px white;
+color:black;
+ font-style: italic;}
+</style>
+</head>
+<body>
+<div class="main">
+  <form name="form">
+  <div class="display-div">
+    <input type="text" name="screen" placeholder="@Rubel Mahmud" disabled>
+  </div>
+    <div class="button-div">
+    <input class="button-operators c" type="button" value="C" onclick="form.screen.value=''">
+    <input class="button-operators" type="button" value="<" onclick="form.screen.value=form.screen.value.slice(0,-1)">
+    <input class="button-operators" type="button" value="%" onclick="form.screen.value+='%'">
+    <input class="button-operators" type="button" value="/" onclick="form.screen.value+='/'">
+    <br>
+    <input class="number" type="button" value="7" onclick="form.screen.value+='7'">
+    <input class="number" type="button" value="8" onclick="form.screen.value+='8'">
+    <input class="number" type="button" value="9" onclick="form.screen.value+='9'">
+    <input class="button-operators" type="button" value="X" onclick="form.screen.value+='*'">
+    <br>
+    <input class="number" type="button" value="4" onclick="form.screen.value+='4'">
+    <input class="number" type="button" value="5" onclick="form.screen.value+='5'">
+    <input class="number" type="button" value="6" onclick="form.screen.value+='6'">
+    <input class="button-operators" type="button" value="-" onclick="form.screen.value+='-'">
+    <br>
+    <input class="number" type="button" value="1" onclick="form.screen.value+='1'">
+    <input class="number" type="button" value="2" onclick="form.screen.value+='2'">
+    <input class="number" type="button" value="3" onclick="form.screen.value+='3'">
+    <input class="button-operators" type="button" value="+" onclick="form.screen.value+='+'">
+    <br>
+    <input class="number" type="button" value="0" onclick="form.screen.value+='0'">
+    <input class="number" type="button" value="00" onclick="form.screen.value+='00'">
+    <input class="number" type="button" value="." onclick="form.screen.value+='.'">
+    <input class="button-operators" type="button" value="=" onclick="form.screen.value=eval(form.screen.value)">
+  </div>
+</form>
+</div>
+
+</body>
+</html>
